@@ -1,11 +1,15 @@
 const rules = require('./rules');
 const plugins = require('./plugins');
 const optimization = require('./optimization');
-const { ROOT_DIR, PUBLIC_DIR, NODE_MODULES_DIR } = require('./constants');
+const {
+  ROOT_DIR,
+  PUBLIC_DIR,
+  NODE_MODULES_DIR,
+  NODE_ENV,
+} = require('./constants');
 
 module.exports = () => {
-  const nodeEnv = process.env.NODE_ENV || 'development';
-  const isProdBuild = nodeEnv === 'production';
+  const isProdBuild = NODE_ENV === 'production';
 
   const polyfills = [
     'core-js/stable',
@@ -13,9 +17,7 @@ module.exports = () => {
     'whatwg-fetch',
   ];
 
-  const entry = isProdBuild
-    ? [...polyfills, './src/index.tsx']
-    : ['react-hot-loader/patch', ...polyfills, './src/index.tsx'];
+  const entry = [...polyfills, './src/index.tsx'];
 
   const output = {
     path: PUBLIC_DIR,

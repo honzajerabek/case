@@ -1,10 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { NODE_ENV } = require('./constants');
 
 module.exports = () => {
-  const nodeEnv = process.env.NODE_ENV || 'development';
-  const isProdBuild = nodeEnv === 'production';
+  const isProdBuild = NODE_ENV === 'production';
 
   const plugins = [
     new HtmlWebpackPlugin({

@@ -5,4 +5,5 @@ module.exports = {
   PUBLIC_DIR: path.resolve(__dirname, '..', 'public'),
   NODE_MODULES_DIR: 'node_modules',
   DIST_DIR: path.resolve(__dirname, '..', 'dist'),
+  NODE_ENV: process.env.NODE_ENV || 'development',
 };

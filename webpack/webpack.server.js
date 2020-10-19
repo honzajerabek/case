@@ -11,7 +11,7 @@ const resolve = {
 module.exports = {
   mode: 'production',
   target: 'node',
-  entry: './src/server/server.ts',
+  entry: './server/server.ts',
   module: { rules },
   resolve,
   plugins: [

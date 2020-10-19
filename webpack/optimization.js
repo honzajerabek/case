@@ -1,32 +1,34 @@
-const TerserPlugin = require('terser-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
+const { NODE_ENV } = require('./constants');
 
-const env = process.env.NODE_ENV || 'development'
-const isProduction = env === 'production' || true
+const isProduction = NODE_ENV === 'production';
 
-module.exports = isProduction ? {
-  minimizer: [
-    new TerserPlugin({
-      parallel: true,
-      sourceMap: true,
-    }),
-  ],
-  splitChunks: {
-    chunks: 'all',
-    minSize: 30000,
-    maxSize: 0,
-    minChunks: 1,
-    maxAsyncRequests: 6,
-    maxInitialRequests: 6,
-    automaticNameDelimiter: '~',
-    name: true,
-    cacheGroups: {
-      // vendor chunk
-      vendors: {
+module.exports = isProduction
+  ? {
+      minimizer: [
+        new TerserPlugin({
+          parallel: true,
+          sourceMap: true,
+        }),
+      ],
+      splitChunks: {
         chunks: 'all',
-        test: /[\\/]node_modules[\\/]/,
-        priority: -10,
-        enforce: true,
+        minSize: 30000,
+        maxSize: 0,
+        minChunks: 1,
+        maxAsyncRequests: 6,
+        maxInitialRequests: 6,
+        automaticNameDelimiter: '~',
+        name: true,
+        cacheGroups: {
+          // vendor chunk
+          vendors: {
+            chunks: 'all',
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            enforce: true,
+          },
+        },
       },
-    },
-  },
-} : {}
+    }
+  : {};
