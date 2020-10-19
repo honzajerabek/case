@@ -1,0 +1,16 @@
+# dependencies
+/node_modules
+.idea/
+
+# production
+/generated
+/dist
+/public
+
+
+# misc
+.DS_Store
+.eslintcache
+
+yarn-debug.log*
+yarn-error.log*

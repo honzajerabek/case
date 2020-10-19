@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "baseUrl": "./",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "allowJs": true,
+    "checkJs": false,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": false,
+    "rootDir": "./",
+    "noEmit": false,
+    "isolatedModules": true,
+    "paths": {
+      "*": [
+        "./*",
+        "*",
+        "node_modules/@types/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
+}

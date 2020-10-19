@@ -1,0 +1,40 @@
+.transition.menu {
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+
+.transition.menu.entering {
+  animation-name: menuIn;
+  overflow-y: hidden;
+}
+
+.transition.menu.exiting {
+  animation-name: MenuOut;
+  overflow-y: hidden;
+}
+
+@keyframes menuIn {
+  0% {
+    max-height: 0;
+    opacity: 1;
+    margin-bottom: 0;
+    overflow-y: hidden;
+  }
+  100% {
+    max-height: 40rem;
+    opacity: 1;
+  }
+}
+
+/* Out */
+@keyframes MenuOut {
+  0% {
+    max-height: 40rem;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}

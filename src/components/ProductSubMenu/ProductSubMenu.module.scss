@@ -1,0 +1,54 @@
+@import '../../styles/definitions';
+
+.menu {
+  padding: 0 0.5rem;
+  @media screen and (min-width: 800px) {
+    padding: 0 2rem;
+  }
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .item {
+    display: flex;
+
+    @media screen and (min-width: 800px) {
+      width: 25%;
+    }
+
+    @media screen and (min-width: 1000px) {
+      width: 20%;
+    }
+
+    @media screen and (min-width: 1366px) {
+      width: 16.6666%;
+    }
+
+    > div {
+      padding: 0.5rem;
+      width: 100%;
+
+      > button {
+        text-align: left;
+        background: $lightGray;
+        border: 1px solid $gray;
+        width: 100%;
+        padding: 1rem;
+        cursor: pointer;
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:hover {
+          background: darken($lightGray, 3%);
+        }
+
+        &:active {
+          background: darken($lightGray, 5%);
+        }
+      }
+    }
+  }
+}

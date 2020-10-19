@@ -1,0 +1,12 @@
+@import '../../styles/definitions';
+
+.wrapper {
+  background: $white;
+
+  .page {
+    max-width: 1366px;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+}
+

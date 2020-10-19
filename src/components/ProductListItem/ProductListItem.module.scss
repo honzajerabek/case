@@ -1,0 +1,55 @@
+@import '../../styles/definitions';
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+
+  .image {
+    position: relative;
+    text-align: center;
+  }
+
+  .rating {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    color: $green;
+    font-size: 1rem;
+  }
+
+  .cprice {
+    font-size: 0.9rem;
+  }
+
+  .strikethrough {
+    position: relative;
+  }
+  .strikethrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+    transform:rotate(-10deg);
+  }
+
+  .availability {
+    text-align: center;
+    font-weight: 600;
+  }
+}

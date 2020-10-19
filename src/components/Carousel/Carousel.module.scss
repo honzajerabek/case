@@ -1,0 +1,13 @@
+@import '../../styles/definitions';
+
+.carousel {
+  padding: 1.5rem;
+  @media screen and (min-width: 800px) {
+    padding: 2.5rem;
+  }
+
+  h2 {
+    font-weight: 400;
+    color: $blue
+  }
+}

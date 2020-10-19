@@ -1,0 +1,24 @@
+.star-rating {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+
+  .star {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../../assets/star.svg');
+  }
+  .active {
+    background-image: url('../../assets/star-active.svg');
+  }
+
+  .fragment-overlay {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

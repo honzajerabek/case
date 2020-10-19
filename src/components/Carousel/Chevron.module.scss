@@ -1,0 +1,37 @@
+@import "../../styles/definitions";
+
+
+.chevron {
+  display: block;
+  height: 60px;
+  width: 25px;
+  background: $blue;
+  border: 1px solid $black;
+  position: absolute;
+  color: $white;
+  border-radius: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.prev {
+    left: calc(-2rem);
+  }
+
+  &.next {
+    right: calc(-2rem);
+  }
+
+  &:hover {
+    background: darken($blue, 3%);
+  }
+
+  &:active {
+    background: darken($blue, 5%);
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../styles/definitions';
+
+.tab-bar {
+  .tabs {
+    padding: 0 1rem;
+  }
+
+  .item {
+    background: $lightGray;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid $black;
+    border-bottom: none;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+
+    &.active {
+      background: $white;
+    }
+
+    &:hover {
+      background: darken($lightGray, 3%);
+    }
+
+    &:active {
+      background: darken($lightGray, 5%);
+    }
+  }
+
+  .content {
+    border-top: 1px solid $black;
+  }
+}

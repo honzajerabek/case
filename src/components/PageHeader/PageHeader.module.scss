@@ -1,0 +1,11 @@
+@import '../../styles/definitions';
+
+.header {
+  color: $darkBlue;
+  font-weight: 500;
+
+  padding: 0.5rem;
+  @media screen and (min-width: 800px) {
+    padding: 2rem;
+  }
+}

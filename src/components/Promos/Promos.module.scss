@@ -1,0 +1,18 @@
+@import '../../styles/definitions';
+
+.promos {
+  margin-bottom: 1rem;
+
+  .promo {
+    color: $gray;
+    font-size: 0.75rem;
+  }
+
+  .free {
+    text-transform: uppercase;
+    font-weight: bold;
+    &:before {
+      content: '+';
+    }
+  }
+}
